@@ -1,15 +1,15 @@
-%define		kdeappsver	19.04.1
+%define		kdeappsver	20.12.3
 %define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		kig
 Summary:	kig
 Name:		ka5-%{kaname}
-Version:	19.04.1
+Version:	20.12.3
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
-Source0:	http://download.kde.org/stable/applications/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	8903b457ea6443e3b3ce7039d7b3a743
+Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
+# Source0-md5:	f66860858d8d8139dd472270dc281292
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5Gui-devel >= 5.11.1
@@ -61,6 +61,8 @@ cd build
 rm -rf $RPM_BUILD_ROOT
 %ninja_install -C build
 
+sed -i -e 's#/usr/bin/env python3#/usr/bin/python3#' $RPM_BUILD_ROOT%{_bindir}/pykig.py
+
 %find_lang %{kaname} --all-name --with-kde
 
 %clean
@@ -93,6 +95,7 @@ rm -rf $RPM_BUILD_ROOT
 %lang(de) %{_mandir}/de/man1/kig.1*
 %lang(es) %{_mandir}/es/man1/kig.1*
 %lang(et) %{_mandir}/et/man1/kig.1*
+%lang(fr) %{_mandir}/fr/man1/kig.1*
 %lang(it) %{_mandir}/it/man1/kig.1*
 %lang(C) %{_mandir}/man1/kig.1*
 %lang(nl) %{_mandir}/nl/man1/kig.1*
