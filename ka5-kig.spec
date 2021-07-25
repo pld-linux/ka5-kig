@@ -44,6 +44,12 @@ students to interactively explore mathematical figures and concepts
 using the computer; Serves as a WYSIWYG tool for drawing mathematical
 figures and including them in other documents.
 
+%description -l pl.UTF-8
+Kig jest programem do interaktywnej geometrii. Pozwala studentom
+interaktywnie poznawać matematyczny figury i koncepty używając
+komputera; służy jako narzędzie WYSIWYG do rysowania matematycznych
+figur i dołączania ich do innych dokumentów.
+
 %prep
 %setup -q -n %{kaname}-%{version}
 
