@@ -1,15 +1,15 @@
-%define		kdeappsver	21.04.3
+%define		kdeappsver	21.08.0
 %define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		kig
 Summary:	kig
 Name:		ka5-%{kaname}
-Version:	21.04.3
+Version:	21.08.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	a742667f33933d3a47751c0cea1ed30a
+# Source0-md5:	b4b9cadd93c457f21a75c0c549c6c290
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5Gui-devel >= 5.11.1
@@ -78,7 +78,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kig
 %attr(755,root,root) %{_bindir}/pykig.py
-%attr(755,root,root) %{_libdir}/qt5/plugins/kigpart.so
+%{_libdir}/qt5/plugins/kf5/parts/kigpart.so
 %{_desktopdir}/org.kde.kig.desktop
 %{_iconsdir}/hicolor/128x128/apps/kig.png
 %{_iconsdir}/hicolor/128x128/mimetypes/application-x-kig.png
