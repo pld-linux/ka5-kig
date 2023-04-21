@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	22.12.3
+%define		kdeappsver	23.04.0
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kig
 Summary:	kig
 Name:		ka5-%{kaname}
-Version:	22.12.3
-Release:	2
+Version:	23.04.0
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	055eba40a9fb0ee326cedd5ee708f5a8
+# Source0-md5:	2af94a6cca5e29bc5fe9cf708a42c252
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5Gui-devel >= 5.11.1
@@ -104,7 +104,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/hicolor/scalable/apps/kig.svgz
 %{_iconsdir}/hicolor/scalable/mimetypes/application-x-kig.svgz
 %{_datadir}/kig
-%{_datadir}/kservices5/kig_part.desktop
 %{_datadir}/kxmlgui5/kig
 %lang(ca) %{_mandir}/ca/man1/kig.1*
 %lang(de) %{_mandir}/de/man1/kig.1*
